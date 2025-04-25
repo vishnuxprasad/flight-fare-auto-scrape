@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+
+# Python bytecode
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local env overrides
+.env
+
+# Ignore all the results folder
+results/
