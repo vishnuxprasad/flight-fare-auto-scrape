@@ -1,5 +1,5 @@
 import pandas as pd
-from emirates import *
+from farescraper.emirates import *
 
 def main():
     # Load input data

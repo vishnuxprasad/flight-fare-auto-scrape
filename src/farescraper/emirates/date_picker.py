@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-from .utils import validate_date, month_to_number
+from farescraper.common.utils import validate_date, month_to_number
 
 class EmiratesDatePicker:
     def __init__(self, driver, timeout: int = 10):
