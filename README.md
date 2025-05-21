@@ -19,18 +19,22 @@
 ```
 flight-fare-auto-scrape/
 │
-├── emirates/              # Website specific package
-│   ├── __init__.py
-│   ├── __main__.py
-│   ├── config.py
-│   ├── booking_page.py
-│   ├── date_picker.py
-│   ├── scraper.py
-│   ├── utils.py
+├── src/
+│ └── farescraper/
+│ ├── init.py
+│ ├── emirates/
+│ │ ├── init.py
+│ │ ├── main.py
+│ │ ├── config.py
+│ │ ├── booking_page.py
+│ │ ├── date_picker.py
+│ │ ├── scraper.py
+│ │ ├── utils.py
 │
-├── input.csv   
-├── results/                 
+├── input.csv
+├── results/
 ├── requirements.txt
+├── setup.py
 ├── .gitignore
 ├── .env
 └── README.md
@@ -44,10 +48,30 @@ flight-fare-auto-scrape/
 - Google Chrome browser  
 - ChromeDriver (must match your Chrome version, see [documentation](https://developer.chrome.com/docs/chromedriver/downloads).)
 
-### Install Python dependencies:
+## Recommended: Virtual Environment Setup
+
+To isolate dependencies and avoid conflicts. [Read more](https://docs.python.org/3/library/venv.html).
 
 ```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate it
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+## Installation
+After activating your virtual environment:
+
+```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Install the package in editable mode
+pip install -e .
 ```
 
 ---
@@ -85,7 +109,7 @@ As of now, the scraper supports **Emirates** only.
 To execute the Emirates scraper:
 
 ```bash
-python -m emirates
+python -m farescraper.emirates
 ```
 
 
